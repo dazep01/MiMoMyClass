@@ -3,43 +3,412 @@
   "modules": [
     {
       "title": "Pengenalan HTML",
+      "description": "Pelajari dasar-dasar HTML untuk membangun struktur halaman web",
+      "icon": "📝",
       "lessons": [
         {
           "title": "Apa itu HTML?",
           "duration": 15,
-          "content": "HTML adalah bahasa markup untuk membuat halaman web..."
+          "content": "HTML (HyperText Markup Language) adalah bahasa markup standar untuk membuat halaman web. HTML mendeskripsikan struktur halaman web menggunakan elemen-elemen yang ditandai dengan tag.",
+          "interactive": {
+            "type": "quiz",
+            "question": "Apa kepanjangan dari HTML?",
+            "options": [
+              "HyperText Markup Language",
+              "HyperText Markup Links",
+              "HighText Machine Language",
+              "HyperTransfer Markup Language"
+            ],
+            "answer": 0,
+            "explanation": "HTML adalah singkatan dari HyperText Markup Language, yang merupakan bahasa markup standar untuk dokumen yang dirancang untuk ditampilkan di browser web."
+          },
+          "codeExample": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Halaman Pertamaku</title>\n</head>\n<body>\n  <h1>Selamat Datang di Website Saya</h1>\n  <p>Ini adalah paragraf pertama saya.</p>\n</body>\n</html>"
         },
         {
           "title": "Struktur Dasar HTML",
           "duration": 20,
-          "content": "Setiap dokumen HTML memiliki struktur dasar yang terdiri dari..."
+          "content": "Setiap dokumen HTML memiliki struktur dasar yang terdiri dari deklarasi doctype, elemen html, head, dan body. Head berisi metadata dan judul halaman, sedangkan body berisi konten yang ditampilkan.",
+          "interactive": {
+            "type": "drag-drop",
+            "instruction": "Susunlah struktur HTML yang benar dengan menempatkan elemen-elemen berikut dalam urutan yang tepat:",
+            "elements": ["<!DOCTYPE html>", "<html>", "<head>", "<title>", "</title>", "</head>", "<body>", "<h1>", "</h1>", "</body>", "</html>"],
+            "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          },
+          "codeExample": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Judul Halaman</title>\n</head>\n<body>\n  <!-- Konten halaman akan ditampilkan di sini -->\n  <h1>Heading Utama</h1>\n  <p>Ini adalah paragraf.</p>\n</body>\n</html>"
         },
         {
           "title": "Tag dan Element HTML",
           "duration": 25,
-          "content": "HTML menggunakan tag untuk menandai elemen-elemen dalam halaman..."
+          "content": "HTML menggunakan tag untuk menandai elemen-elemen dalam halaman. Setiap elemen biasanya terdiri dari tag pembuka, konten, dan tag penutup. Beberapa elemen seperti <img> adalah self-closing dan tidak memerlukan tag penutup.",
+          "interactive": {
+            "type": "code-challenge",
+            "instruction": "Perbaiki kode HTML berikut dengan menambahkan tag yang tepat:",
+            "code": "<h1>Judul Halaman</h1>\n<pIni adalah paragraf pertama\n<p>Ini adalah paragraf kedua",
+            "solution": "<h1>Judul Halaman</h1>\n<p>Ini adalah paragraf pertama</p>\n<p>Ini adalah paragraf kedua</p>",
+            "hint": "Perhatikan tag pembuka dan penutup untuk elemen paragraf"
+          },
+          "examples": [
+            {
+              "title": "Heading",
+              "code": "<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>"
+            },
+            {
+              "title": "Paragraf",
+              "code": "<p>Ini adalah paragraf.</p>\n<p>Ini adalah paragraf lainnya.</p>"
+            },
+            {
+              "title": "Gambar",
+              "code": "<img src=\"gambar.jpg\" alt=\"Deskripsi gambar\">"
+            }
+          ]
         }
       ]
     },
     {
       "title": "CSS Dasar",
+      "description": "Pelajari cara menggunakan CSS untuk memperindah tampilan halaman web",
+      "icon": "🎨",
       "lessons": [
         {
           "title": "Pengenalan CSS",
           "duration": 15,
-          "content": "CSS digunakan untuk mengatur tampilan dari elemen HTML..."
+          "content": "CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dari elemen HTML. Dengan CSS, Anda dapat mengubah warna, font, tata letak, dan banyak aspek visual lainnya dari halaman web.",
+          "interactive": {
+            "type": "quiz",
+            "question": "Apa kepanjangan dari CSS?",
+            "options": [
+              "Cascading Style Sheets",
+              "Computer Style Sheets",
+              "Creative Style System",
+              "Cascading System Styles"
+            ],
+            "answer": 0,
+            "explanation": "CSS adalah singkatan dari Cascading Style Sheets, yang digunakan untuk mendeskripsikan presentasi dokumen yang ditulis dalam HTML."
+          },
+          "codeExample": "/* Ini adalah komentar CSS */\nbody {\n  font-family: Arial, sans-serif;\n  background-color: #f0f0f0;\n  margin: 0;\n  padding: 20px;\n}\n\nh1 {\n  color: navy;\n  text-align: center;\n}"
         },
         {
           "title": "Selector CSS",
           "duration": 20,
-          "content": "Selector digunakan untuk memilih elemen HTML yang akan diberi style..."
+          "content": "Selector digunakan untuk memilih elemen HTML yang akan diberi style. Ada beberapa jenis selector: selector elemen, selector class, selector ID, dan selector atribut.",
+          "interactive": {
+            "type": "matching",
+            "instruction": "Pasangkan setiap selector CSS dengan deskripsinya:",
+            "pairs": [
+              {
+                "selector": "p",
+                "description": "Memilih semua elemen <p>"
+              },
+              {
+                "selector": ".class-name",
+                "description": "Memilih elemen dengan class tertentu"
+              },
+              {
+                "selector": "#id-name",
+                "description": "Memilih elemen dengan ID tertentu"
+              },
+              {
+                "selector": "div p",
+                "description": "Memilih semua elemen <p> di dalam elemen <div>"
+              }
+            ]
+          },
+          "examples": [
+            {
+              "title": "Selector Elemen",
+              "code": "p {\n  color: blue;\n}"
+            },
+            {
+              "title": "Selector Class",
+              "code": ".highlight {\n  background-color: yellow;\n}"
+            },
+            {
+              "title": "Selector ID",
+              "code": "#header {\n  font-size: 24px;\n}"
+            }
+          ]
         },
         {
           "title": "Box Model",
           "duration": 25,
-          "content": "Box model adalah konsep fundamental dalam CSS yang terdiri dari..."
+          "content": "Box model adalah konsep fundamental dalam CSS yang terdiri dari content, padding, border, dan margin. Setiap elemen HTML dianggap sebagai kotak, dan pemahaman tentang box model penting untuk tata letak yang tepat.",
+          "interactive": {
+            "type": "visualization",
+            "instruction": "Atur nilai-nilai box model berikut dan lihat pengaruhnya:",
+            "properties": [
+              {
+                "name": "width",
+                "min": 100,
+                "max": 500,
+                "value": 300,
+                "unit": "px"
+              },
+              {
+                "name": "padding",
+                "min": 0,
+                "max": 50,
+                "value": 20,
+                "unit": "px"
+              },
+              {
+                "name": "border",
+                "min": 0,
+                "max": 20,
+                "value": 5,
+                "unit": "px"
+              },
+              {
+                "name": "margin",
+                "min": 0,
+                "max": 50,
+                "value": 10,
+                "unit": "px"
+              }
+            ]
+          },
+          "codeExample": ".box {\n  width: 300px;\n  padding: 20px;\n  border: 5px solid navy;\n  margin: 10px;\n  background-color: lightblue;\n}"
         }
       ]
+    },
+    {
+      "title": "JavaScript Dasar",
+      "description": "Pelajari dasar-dasar JavaScript untuk membuat halaman web yang interaktif",
+      "icon": "⚡",
+      "lessons": [
+        {
+          "title": "Pengenalan JavaScript",
+          "duration": 20,
+          "content": "JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web interaktif. Dengan JavaScript, Anda dapat memanipulasi konten, mengontrol multimedia, membuat animasi, dan banyak lagi.",
+          "interactive": {
+            "type": "quiz",
+            "question": "Apa yang dapat dilakukan oleh JavaScript?",
+            "options": [
+              "Memanipulasi konten HTML",
+              "Menggaya elemen CSS",
+              "Bereaksi terhadap event pengguna",
+              "Semua jawaban benar"
+            ],
+            "answer": 3,
+            "explanation": "JavaScript dapat melakukan semua hal tersebut: memanipulasi konten HTML, menggaya elemen CSS, dan bereaksi terhadap event pengguna seperti klik, input, dan lainnya."
+          },
+          "codeExample": "// Ini adalah komentar JavaScript\nconsole.log(\"Halo, Dunia!\");\n\ndocument.getElementById(\"demo\").innerHTML = \"Halo, JavaScript!\";\n\ndocument.getElementById(\"demo\").style.color = \"red\";"
+        },
+        {
+          "title": "Variabel dan Tipe Data",
+          "duration": 25,
+          "content": "Variabel digunakan untuk menyimpan data. JavaScript memiliki beberapa tipe data termasuk string, number, boolean, array, dan object. ES6 memperkenalkan let dan const sebagai alternatif untuk var.",
+          "interactive": {
+            "type": "code-challenge",
+            "instruction": "Deklarasikan variabel dengan ketentuan berikut:",
+            "tasks": [
+              "Buat variabel nama dengan tipe string",
+              "Buat variabel umur dengan tipe number",
+              "Buat variabel isStudent dengan tipe boolean",
+              "Buat array hobbies dengan 3 hobi",
+              "Buat object person dengan properti nama dan umur"
+            ],
+            "solution": "let nama = \"Budi\";\nlet umur = 25;\nlet isStudent = true;\nlet hobbies = [\"Membaca\", \"Bermain Musik\", \"Olahraga\"];\nlet person = { nama: \"Budi\", umur: 25 };"
+          },
+          "examples": [
+            {
+              "title": "Deklarasi Variabel",
+              "code": "var nama = \"Budi\";      // Function scope\nlet umur = 25;         // Block scope\nconst PI = 3.14;       // Konstanta, tidak dapat diubah"
+            },
+            {
+              "title": "Tipe Data",
+              "code": "let teks = \"Hello\";      // String\nlet angka = 42;         // Number\nlet benar = true;       // Boolean\nlet array = [1, 2, 3];  // Array\nlet obj = {             // Object\n  nama: \"Budi\",\n  umur: 25\n};"
+            }
+          ]
+        },
+        {
+          "title": "Fungsi dan Event",
+          "duration": 30,
+          "content": "Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu. Event adalah tindakan yang terjadi di halaman web, seperti klik mouse, penekanan tombol, atau pemuatan halaman. JavaScript dapat 'mendengarkan' event ini dan mengeksekusi kode sebagai respons.",
+          "interactive": {
+            "type": "sandbox",
+            "instruction": "Buat fungsi yang menampilkan pesan ketika tombol diklik:",
+            "starterCode": "<button id=\"myButton\">Klik Saya!</button>\n\n<script>\n  // Tulis kode JavaScript di sini\n</script>",
+            "solution": "<button id=\"myButton\">Klik Saya!</button>\n\n<script>\n  document.getElementById(\"myButton\").addEventListener(\"click\", function() {\n    alert(\"Tombol diklik!\");\n  });\n</script>"
+          },
+          "examples": [
+            {
+              "title": "Fungsi Deklarasi",
+              "code": "function sapa(nama) {\n  return \"Halo, \" + nama + \"!\";\n}\n\nlet pesan = sapa(\"Budi\");\nconsole.log(pesan); // Halo, Budi!"
+            },
+            {
+              "title": "Event Listener",
+              "code": "document.getElementById(\"myButton\").addEventListener(\"click\", function() {\n  alert(\"Tombol diklik!\");\n});"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Proyek Akhir: Website Portofolio",
+      "description": "Terapkan semua yang telah dipelajari dengan membuat website portofolio pribadi",
+      "icon": "🚀",
+      "lessons": [
+        {
+          "title": "Perencanaan dan Struktur",
+          "duration": 30,
+          "content": "Sebelum mulai coding, rencanakan struktur website portofolio Anda. Tentukan bagian-bagian yang ingin disertakan seperti header, tentang saya, portofolio, keterampilan, dan kontak.",
+          "interactive": {
+            "type": "planning",
+            "instruction": "Buat wireframe sederhana untuk website portofolio Anda dengan menambahkan komponen-komponen berikut:",
+            "components": [
+              "Header dengan navigasi",
+              "Section 'Tentang Saya'",
+              "Section 'Portofolio'",
+              "Section 'Keterampilan'",
+              "Section 'Kontak'",
+              "Footer"
+            ],
+            "layoutOptions": ["Satu halaman dengan navigasi smooth", "Halaman terpisah", "Kombinasi keduanya"]
+          },
+          "checklist": [
+            "Tentukan tujuan website",
+            "Identifikasi target audiens",
+            "Kumpulkan konten (teks, gambar, proyek)",
+            "Buat sketsa wireframe",
+            "Tentukan palet warna dan tipografi"
+          ]
+        },
+        {
+          "title": "Implementasi dengan HTML dan CSS",
+          "duration": 45,
+          "content": "Dengan menggunakan HTML dan CSS, implementasikan website portofolio sesuai dengan perencanaan yang telah dibuat. Gunakan semantic HTML untuk struktur yang lebih baik dan CSS modern seperti Flexbox atau Grid untuk tata letak.",
+          "interactive": {
+            "type": "code-along",
+            "instruction": "Ikuti langkah-langkah untuk membuat komponen header:",
+            "steps": [
+              "Buat struktur HTML untuk header",
+              "Tambahkan logo/nama di kiri",
+              "Tambahkan navigasi di kanan",
+              "Gaya header dengan CSS",
+              "Buat responsif dengan media queries"
+            ],
+            "finalCode": {
+              "html": "<header>\n  <div class=\"container\">\n    <div class=\"logo\">Nama Saya</div>\n    <nav>\n      <ul>\n        <li><a href=\"#about\">Tentang</a></li>\n        <li><a href=\"#portfolio\">Portofolio</a></li>\n        <li><a href=\"#skills\">Keterampilan</a></li>\n        <li><a href=\"#contact\">Kontak</a></li>\n      </ul>\n    </nav>\n  </div>\n</header>",
+              "css": "header {\n  background-color: #333;\n  color: white;\n  padding: 1rem 0;\n  position: fixed;\n  width: 100%;\n  top: 0;\n  z-index: 1000;\n}\n\n.container {\n  width: 90%;\n  max-width: 1200px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.logo {\n  font-size: 1.5rem;\n  font-weight: bold;\n}\n\nnav ul {\n  display: flex;\n  list-style: none;\n  gap: 1.5rem;\n}\n\nnav a {\n  color: white;\n  text-decoration: none;\n  transition: color 0.3s;\n}\n\nnav a:hover {\n  color: #4caf50;\n}"
+            }
+          }
+        },
+        {
+          "title": "Menambahkan Interaktivitas dengan JavaScript",
+          "duration": 35,
+          "content": "Tambahkan interaktivitas ke website portofolio dengan JavaScript. Buat navigasi smooth scroll, tambahkan efek animasi, buat form kontak yang interaktif, dan tambahkan fitur dark mode jika memungkinkan.",
+          "interactive": {
+            "type": "challenge",
+            "instruction": "Tambahkan smooth scroll untuk navigasi dengan JavaScript:",
+            "hints": [
+              "Gunakan event listener untuk setiap link navigasi",
+              "Cegah perilaku default link",
+              "Dapatkan elemen target dengan getElementById atau querySelector",
+              "Gunakan method scrollIntoView dengan behavior: 'smooth'"
+            ],
+            "solution": "document.querySelectorAll('nav a').forEach(anchor => {\n  anchor.addEventListener('click', function(e) {\n    e.preventDefault();\n    const targetId = this.getAttribute('href');\n    document.querySelector(targetId).scrollIntoView({\n      behavior: 'smooth'\n    });\n  });\n});"
+          },
+          "features": [
+            "Smooth scroll navigation",
+            "Animasi scroll",
+            "Form validation",
+            "Dark/light mode toggle",
+            "Portfolio filtering",
+            "Interactive skills chart"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Praktek Membuat Website Portofolio",
+        "description": "Praktekkan semua yang telah dipelajari dengan membuat website portofolio pribadi",
+        "tasks": [
+          {
+            "title": "Buat Struktur HTML",
+            "instruction": "Buat struktur HTML untuk website portofolio dengan semua bagian yang diperlukan.",
+            "hint": "Gunakan semantic HTML seperti header, nav, section, footer",
+            "solution": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Portofolio Saya</title>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</head>\n<body>\n  <header>\n    <!-- Navigasi -->\n  </header>\n  <main>\n    <section id=\"about\"><!-- Tentang saya --></section>\n    <section id=\"portfolio\"><!-- Portofolio --></section>\n    <section id=\"skills\"><!-- Keterampilan --></section>\n    <section id=\"contact\"><!-- Kontak --></section>\n  </main>\n  <footer>\n    <!-- Footer -->\n  </footer>\n</body>\n</html>",
+            "codeEditor": {
+              "html": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Portofolio Saya</title>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</head>\n<body>\n  <!-- Buat struktur website portofolio di sini -->\n</body>\n</html>"
+            }
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "evaluation": {
+    "title": "Evaluasi Pemrograman Web",
+    "description": "Uji pemahaman Anda tentang semua konsep yang telah dipelajari",
+    "quizzes": [
+      {
+        "question": "Apa perbedaan utama antara HTML, CSS, dan JavaScript?",
+        "options": [
+          "HTML untuk struktur, CSS untuk tampilan, JavaScript untuk perilaku",
+          "HTML untuk tampilan, CSS untuk struktur, JavaScript untuk perilaku",
+          "HTML untuk perilaku, CSS untuk struktur, JavaScript untuk tampilan",
+          "HTML untuk struktur, CSS untuk perilaku, JavaScript untuk tampilan"
+        ],
+        "answer": 0,
+        "explanation": "HTML (HyperText Markup Language) digunakan untuk membuat struktur halaman web, CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan, dan JavaScript digunakan untuk menambahkan interaktivitas dan perilaku dinamis."
+      },
+      {
+        "question": "Manakah yang BUKAN merupakan jenis selector CSS?",
+        "options": [
+          "Class selector",
+          "ID selector",
+          "Element selector",
+          "Database selector"
+        ],
+        "answer": 3,
+        "explanation": "Database selector bukan merupakan jenis selector CSS. Selector CSS yang umum digunakan adalah class selector (.class), ID selector (#id), element selector (element), attribute selector ([attribute]), dan pseudo-class selector (:hover)."
+      },
+      {
+        "question": "Apa yang akan terjadi jika kita lupa menutup tag HTML?",
+        "options": [
+          "Halaman web tidak akan ditampilkan sama sekali",
+          "Browser akan mencoba memperbaikinya, tetapi mungkin menyebabkan tata letak yang tidak diinginkan",
+          "Hanya CSS yang tidak akan bekerja",
+          "JavaScript akan menghasilkan error"
+        ],
+        "answer": 1,
+        "explanation": "Browser modern mencoba untuk memperbaiki HTML yang tidak valid, tetapi ini dapat menyebabkan hasil yang tidak diinginkan dalam tata letak dan perilaku halaman. Selalu gunakan HTML yang valid untuk hasil yang konsisten di semua browser."
+      }
+    ]
+  },
+  "finalExam": {
+    "title": "Ujian Akhir Pemrograman Web",
+    "description": "Uji pemahaman keseluruhan Anda tentang HTML, CSS, dan JavaScript",
+    "timeLimit": 45,
+    "passingScore": 70,
+    "questions": [
+      {
+        "question": "Jelaskan dengan contoh bagaimana HTML, CSS, dan JavaScript bekerja bersama dalam pembuatan website modern.",
+        "type": "essay",
+        "maxLength": 1000,
+        "points": 25
+      },
+      {
+        "question": "Buatlah kode HTML dan CSS untuk membuat card produk dengan gambar, judul, deskripsi, dan tombol.",
+        "type": "code",
+        "language": "html",
+        "points": 25
+      },
+      {
+        "question": "Jelaskan apa yang dilakukan kode JavaScript berikut: document.querySelector('.btn').addEventListener('click', function() { this.classList.toggle('active'); });",
+        "type": "explanation",
+        "points": 15
+      },
+      {
+        "question": "Apa yang dimaksud dengan responsive web design dan mengapa itu penting?",
+        "type": "essay",
+        "maxLength": 500,
+        "points": 20
+      },
+      {
+        "question": "Sebutkan dan jelaskan 3 best practice dalam pengembangan web modern.",
+        "type": "essay",
+        "maxLength": 600,
+        "points": 15
+      }
+    ]
+  }
 }
