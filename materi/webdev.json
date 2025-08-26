@@ -1,0 +1,45 @@
+{
+  "courseId": "web-dev",
+  "modules": [
+    {
+      "title": "Pengenalan HTML",
+      "lessons": [
+        {
+          "title": "Apa itu HTML?",
+          "duration": 15,
+          "content": "HTML adalah bahasa markup untuk membuat halaman web..."
+        },
+        {
+          "title": "Struktur Dasar HTML",
+          "duration": 20,
+          "content": "Setiap dokumen HTML memiliki struktur dasar yang terdiri dari..."
+        },
+        {
+          "title": "Tag dan Element HTML",
+          "duration": 25,
+          "content": "HTML menggunakan tag untuk menandai elemen-elemen dalam halaman..."
+        }
+      ]
+    },
+    {
+      "title": "CSS Dasar",
+      "lessons": [
+        {
+          "title": "Pengenalan CSS",
+          "duration": 15,
+          "content": "CSS digunakan untuk mengatur tampilan dari elemen HTML..."
+        },
+        {
+          "title": "Selector CSS",
+          "duration": 20,
+          "content": "Selector digunakan untuk memilih elemen HTML yang akan diberi style..."
+        },
+        {
+          "title": "Box Model",
+          "duration": 25,
+          "content": "Box model adalah konsep fundamental dalam CSS yang terdiri dari..."
+        }
+      ]
+    }
+  ]
+}
