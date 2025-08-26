@@ -3,55 +3,36 @@
     {
       "id": "web-dev",
       "title": "Pemrograman Web Modern",
-      "description": "Pelajari cara membangun website modern dengan HTML, CSS, dan JavaScript.",
+      "description": "Pelajari cara membangun website modern dengan HTML, CSS, dan JavaScript. Kursus ini cocok untuk pemula yang ingin memulai karir di bidang web development.",
       "level": "Pemula",
       "totalHours": 24,
       "rating": 4.8,
-      "image": "https://via.placeholder.com/800x400?text=Web+Development",
       "instructor": {
         "name": "Ahmad Santoso",
         "title": "Senior Web Developer",
-        "avatar": "https://via.placeholder.com/100?text=AS",
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
         "rating": 4.9,
         "students": 12450,
-        "bio": "Ahmad adalah web developer dengan pengalaman lebih dari 10 tahun."
+        "bio": "Ahmad adalah web developer dengan pengalaman lebih dari 10 tahun. Dia telah bekerja pada berbagai proyek besar dan sekarang fokus pada pendidikan programming."
       },
-      "modules": [
-        {
-          "title": "Pengenalan HTML",
-          "lessons": [
-            { "title": "Apa itu HTML?", "duration": 15 },
-            { "title": "Struktur Dasar HTML", "duration": 20 },
-            { "title": "Tag dan Element HTML", "duration": 25 }
-          ]
-        }
-      ]
+      "materiUrl": "https://dazep01.github.io/MiMoMyClass/materi/webdev.json"
     },
     {
       "id": "data-science",
       "title": "Data Science untuk Pemula",
-      "description": "Kuasai dasar-dasar data science dengan Python.",
+      "description": "Kuasai dasar-dasar data science dengan Python. Pelajari analisis data, visualisasi, dan machine learning dasar.",
       "level": "Pemula",
       "totalHours": 32,
       "rating": 4.7,
-      "image": "https://via.placeholder.com/800x400?text=Data+Science",
       "instructor": {
         "name": "Dewi Lestari",
         "title": "Data Scientist",
-        "avatar": "https://via.placeholder.com/100?text=DL",
+        "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
         "rating": 4.8,
         "students": 8950,
-        "bio": "Dewi adalah data scientist dengan latar belakang pendidikan statistika."
+        "bio": "Dewi adalah data scientist dengan latar belakang pendidikan statistika. Dia telah membantu banyak perusahaan dalam menganalisis data mereka."
       },
-      "modules": [
-        {
-          "title": "Pengenalan Data Science",
-          "lessons": [
-            { "title": "Apa itu Data Science?", "duration": 15 },
-            { "title": "Tools yang Digunakan", "duration": 20 }
-          ]
-        }
-      ]
+      "materiUrl": "https://dazep01.github.io/MiMoMyClass/materi/datascience.json"
     }
   ]
 }
